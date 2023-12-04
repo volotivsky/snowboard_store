@@ -56,7 +56,6 @@ app.post('/uploads')
 
 app.get('/posts', async(req,res)=>{
     try{
-        res.setHeader("Access-Control-Allow-Credentials","true")
         const posts = await Schema_post.find()
         res.json(posts)
     }catch(err){
