@@ -15,6 +15,9 @@ mongoose.connect('mongodb+srv://reganme0:dfwUOo9d0n0xflw4@vlavol.cptqlrl.mongodb
 const app = express()
 app.use(express.json())
 app.use(cors())
+app.get('/',(req,res)=>{
+    res.send('all ok')
+})
 app.use('/uploads',express.static('uploads'))
 const storage = multer.diskStorage({
     destination: (_,__,cb)=>{
